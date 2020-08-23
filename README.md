@@ -1,5 +1,4 @@
 ## groups_usersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -13,8 +12,9 @@
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
 ### Association
--has many :groups_users
--has many :users, through: :groups_users
+- has many :groups_users
+- has many :users, through: :groups_users
+- belongs_to :message
 
 
 ## usersテーブル
@@ -24,16 +24,16 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-- has many: groups_users
-- has many: groups, through: :groups_users
-- belongs_to: comment
+- has many :groups_users
+- has many :groups, through: :groups_users
+- belongs_to :message
 
 
-## commentsテーブル
-
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|image|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association

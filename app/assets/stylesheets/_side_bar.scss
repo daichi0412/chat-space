@@ -1,0 +1,50 @@
+$side-color: #253141;
+$side-font: #ffffff;
+
+.side_bar {
+  background-color: $side-color;
+  width: 300px;
+  display: block;
+  .side-bar_user-name {
+    background-color: $side-color;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+    .top-items__name {
+      color: $side-font;
+      font-size: 16px;
+      margin-left: 20px;
+      height: 20px;
+      width: 260px;
+    }
+    .top-items__edit-icons {
+      width: 60px;
+      height: 20px;
+      color: $side-font;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 5px;
+    }
+    .top-items__cog-icons {
+      color: $side-font;
+      margin-right: 20px;
+    }
+  .side-bar_group-list {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+  }
+    .top-items__group {
+      color: $side-font;
+      font-size: 15px;
+      margin: 20px 0 5px 20px;
+      width: 260px;
+    }
+    .top-items__message-info {
+      font-size: 11px;
+      margin: 0 0 40px 20px;
+      color: $side-font;
+    }
+}

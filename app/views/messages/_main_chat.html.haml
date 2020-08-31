@@ -1,0 +1,23 @@
+%body
+  .main_chat
+    .main-chat__header
+      .chat-main__group-info
+        .chat-main__group-name test 
+        .chat-main__member-list Member:masa
+      .chat-main__edit Edit
+    .chat-main__message-list
+      .chat-main__body
+        .chat-main__message-man masa
+        .chat-main__message-date 2019/11/20(Wed) 17:43:01
+        .chat-main__message おはよう！
+        .chat-main__second-message-man masa
+        .chat-main__second-message-date 2019/11/20(Wed) 17:43:34
+        .chat-main__second-message 今日は夜から雨
+    .chat-main__message-form
+      %form.main-chat__footer
+        .chat-main__contact-form 
+          %input.form__message{"placeholder": "type a message", "type": "text"}
+            %label{class: "input-box__image"}
+              = icon('far', 'image')
+              %input.icon-file{"type": "file"}
+        %input.form__submit{"name": "commit", "type": "submit", "value": "Send"}

@@ -2,25 +2,24 @@
   background-color: #ffffff;
   width: calc(100vw - 300px);
   display: block;
-  .main-chat__header {
-    display: flex;
-    justify-content: space-between;
-  }
-    .chat-main__group-info {
-      background-color: #ffffff;
-      height: 100px;
-    }
-      .chat-main__group-name {
-        color: #333333;
-        font-size: 20px;
-        margin: 35px 0px 15px 40px;
-      }
-      .chat-main__member-list {
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__group {
+    background-color: #ffffff;
+    height: 100px;
+    &__group-name {
+      color: #333333;
+      font-size: 20px;
+      margin: 35px 0px 15px 40px;
+      &__member-list {
         color: #999999;
         font-size: 12px;
         margin-left: 40px;
       }
-    .chat-main__edit {
+    &__edit {
       font-size: 16px;
       color: #38aef0;
       display: flex;
@@ -29,88 +28,94 @@
       border: 1px solid #38aef0;
       padding: 0 20px;
     }
-  .chat-main__message-list {
-    background-color: #fafafa;
-    height: calc(100vh - 190px);
-    padding: 35px;
-  }
-    .chat-main__body {
-      display: flex;
-      flex-direction: column;
-      padding-left: 40px;
     }
-      .chat-main__message-man {
-        font-size: 16px;
-        color: #333333;
-        margin-bottom: 12px;
-      }
-      .chat-main__message-date {
-        font-size: 12px;
-        color: #999999;
-      }
-      .chat-main__message {
-        margin-bottom: 46px;
-        font-size: 14px;
-        color: #434A54;
-      }
-      .chat-main__second-message-man {
-        font-size: 16px;
-        color: #333333;
-       margin-bottom: 12px;
-      }
-      .chat-main__second-message-date {
-        font-size: 12px;
-        color: #999999;
-      }
-      .chat-main__second-message {
-        margin-bottom: 46px;
-        font-size: 14px;
-        color: #434A54;
-      }
-  .chat-main__message-form {
+  }
+}
+
+.message {
+  background-color: #fafafa;
+  height: calc(100vh - 190px);
+  padding: 35px;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    &__message-man {
+      font-size: 16px;
+      color: #333333;
+      margin-bottom: 12px;
+    }
+    &__message-date {
+      font-size: 12px;
+      color: #999999;
+    }
+    &__comments {
+      margin-bottom: 46px;
+      font-size: 14px;
+      color: #434A54;
+    }
+    &__second-message-man {
+      font-size: 16px;
+      color: #333333;
+     margin-bottom: 12px;
+    }
+    &__second-message-date {
+      font-size: 12px;
+      color: #999999;
+    }
+    &__second-comments {
+      margin-bottom: 46px;
+      font-size: 14px;
+      color: #434A54;
+    }
+  }
+}
+
+
+
+.form {
   background-color: #d2d2d2;
   height: 90px;
   padding: 20px 50px 20px 40px;
   box-sizing: border-box;
-  }
-    .main-chat__footer {
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    &__comments {
+      width: 100%;
+      background-color: #fff;
+      position: relative;
       display: flex;
-      justify-content: space-between;
-    }
-      .chat-main__contact-form {
-        width: 100%;
-        background-color: #fff;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-right: 10px;
-      }
-        .form__message {
-          height: 50px;
-          padding: 0 45px 0 15px;
-          width: 100%;
-          border: none;
-        }
-          .input-box__image {
-            height: 50px;
-            right: 10px;
-            position: absolute;
-          }
-            .fa-image {
-              font-size: 25px;
-              line-height: 50px;
-            }
-            .icon-file {
-               display: none;
-            }
-      .form__submit {
+      justify-content: center;
+      align-items: center;
+      padding-right: 10px;
+      &message {
         height: 50px;
-        background-color: #38aef0;
-        color: #fff;
-        font-size: 16px;
-        padding: 0 30px;
-        margin-left: 15px;
-        padding: 0 30px;
+        padding: 0 45px 0 15px;
+        width: 100%;
+        border: none;
+        .input-box__image {
+          height: 50px;
+          right: 10px;
+          position: absolute;
+          .fa-image {
+            font-size: 25px;
+            line-height: 50px;
+          }
+          .icon-file {
+            display: none;
+          }
+        }
       }
+    }
+    &__submit {
+      height: 50px;
+      background-color: #38aef0;
+      color: #fff;
+      font-size: 16px;
+      padding: 0 30px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
 }

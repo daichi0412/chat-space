@@ -5,17 +5,21 @@ $side-font: #ffffff;
   background-color: $side-color;
   width: 300px;
   display: block;
-}
-  
+  a, a:hover, a:visited{
+    color: $side-font;
+  }
+} 
+
 .side-bar_user-name {
   background-color: $side-color;
   height: 100px;
   display: flex;
   align-items: center;
+  color: $side-font;
+  margin-left: 20px;
   .top-items__name {
     color: $side-font;
     font-size: 16px;
-    margin-left: 20px;
     height: 20px;
     width: 260px;
   }
@@ -51,4 +55,5 @@ $side-font: #ffffff;
     color: $side-font;
   }
 }
+
 

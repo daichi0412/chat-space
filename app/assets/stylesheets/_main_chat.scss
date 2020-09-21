@@ -10,25 +10,25 @@
   &__group {
     background-color: #ffffff;
     height: 100px;
-    &__group-name {
+    &-name {
       color: #333333;
       font-size: 20px;
       margin: 35px 0px 15px 40px;
-      &__member-list {
-        color: #999999;
-        font-size: 12px;
-        margin-left: 40px;
-      }
-    &__edit {
-      font-size: 16px;
-      color: #38aef0;
-      display: flex;
-      align-items: center;
-      margin: 28px 40px 28px 0;
-      border: 1px solid #38aef0;
-      padding: 0 20px;
     }
+    .header__member-list {
+      color: #999999;
+      font-size: 12px;
+      margin-left: 40px;
     }
+  }
+  .header__edit {
+    font-size: 16px;
+    color: #38aef0;
+    display: flex;
+    align-items: center;
+    margin: 28px 40px 28px 0;
+    border: 1px solid #38aef0;
+    padding: 0 20px;
   }
 }
 
@@ -40,38 +40,36 @@
     display: flex;
     flex-direction: column;
     padding-left: 40px;
-    &__message-man {
+    .message__message-man {
       font-size: 16px;
       color: #333333;
       margin-bottom: 12px;
     }
-    &__message-date {
+    .message__message-date {
       font-size: 12px;
       color: #999999;
     }
-    &__comments {
+    .message__comments {
       margin-bottom: 46px;
       font-size: 14px;
       color: #434A54;
     }
-    &__second-message-man {
+    .message__second-message-man {
       font-size: 16px;
       color: #333333;
      margin-bottom: 12px;
     }
-    &__second-message-date {
+    .message__second-message-date {
       font-size: 12px;
       color: #999999;
     }
-    &__second-comments {
+    .message__second-comments {
       margin-bottom: 46px;
       font-size: 14px;
       color: #434A54;
     }
   }
 }
-
-
 
 .form {
   background-color: #d2d2d2;
@@ -81,7 +79,7 @@
   &__footer {
     display: flex;
     justify-content: space-between;
-    &__comments {
+    .form__comments {
       width: 100%;
       background-color: #fff;
       position: relative;
@@ -89,26 +87,26 @@
       justify-content: center;
       align-items: center;
       padding-right: 10px;
-      &message {
+      .form__message {
         height: 50px;
         padding: 0 45px 0 15px;
         width: 100%;
         border: none;
-        .input-box__image {
-          height: 50px;
-          right: 10px;
-          position: absolute;
-          .fa-image {
-            font-size: 25px;
-            line-height: 50px;
-          }
-          .icon-file {
-            display: none;
-          }
-        }
+      }
+    .input-box__image {
+      height: 50px;
+      right: 10px;
+      position: absolute;
+      .fa-image {
+        font-size: 25px;
+        line-height: 50px;
+      }
+      .icon-file {
+        display: none;
       }
     }
-    &__submit {
+  }
+    .form__submit {
       height: 50px;
       background-color: #38aef0;
       color: #fff;

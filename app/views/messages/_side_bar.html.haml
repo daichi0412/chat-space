@@ -4,12 +4,16 @@
       = current_user.name
       .top-items__name 
       .top-items__edit-icons 
-        = link_to '#' do
+        = link_to new_group_path do
           = icon('far', 'edit')
       .top-items__cog-icons
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog')
     .side-bar_group-list
-      .top-items__group techcamp
-      .top-items__message-info まだメッセージがありません
-      
+      - current_user.groups.each do |group|
+        = link_to '#' do
+          .top-items__group
+            = group.name
+          .top-items__message-info 
+            まだメッセージがありません
+          

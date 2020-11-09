@@ -2,22 +2,19 @@
   .main_chat
     .header
       .header__group
-        .header__group-name test 
-        .header__member-list Member:masa
+        .header__group-name
+          = @group.name
+        .header__member-list
+          - @group.users.each do |user|
+            = user.name
       .header__edit Edit
     .message
-      .message__body
-        .message__message-man masa
-        .message__message-date 2019/11/20(Wed) 17:43:01
-        .message__comments おはよう！
-        .message__second-message-man masa
-        .message__second-message-date 2019/11/20(Wed) 17:43:34
-        .message__second-comments 今日は夜から雨
+      = render @messages
     .form
-      %form.form__footer
-        .form__comments 
-          %input.form__message{"placeholder": "type a message", "type": "text"}
-            %label{class: "input-box__image"}
-              = icon('fa', 'image')
-              %input.icon-file{"type": "file"}
-        %input.form__submit{"name": "commit", "type": "submit", "value": "Send"}
+      = form_with model: [@group, @message], html: {class: "form__comments"}, local: true do |f|
+        .form__footer
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = icon('far', 'image', class: 'fa-image')
+            = f.file_field :image, class: 'icon-file'
+        = f.submit 'Send', class: 'form__submit'

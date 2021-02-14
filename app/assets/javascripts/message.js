@@ -51,7 +51,7 @@ $(function(){
     .done(function(data){
       let html = buildHTML(data);
       $('.form__message').append(html);
-      $('.form__message').animate({ scrollTop: $('.form__message')[0].scrollHeight});
+      $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
       $('form')[0].reset();
     })
     .fail(function() {

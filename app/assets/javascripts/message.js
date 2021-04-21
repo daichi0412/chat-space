@@ -50,8 +50,9 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.form__message').append(html);
+      $('.message').append(html);
       $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
+      $('.form__submit').prop('disabled', false)
       $('form')[0].reset();
     })
     .fail(function() {

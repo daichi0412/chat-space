@@ -2,18 +2,18 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-          `<div class="message__body">
-            <div class="message__message-man">
-              ${message.user_name}
-            </div>
-            <div class="message__message-date">
-              ${message.created_at}
-            </div>
-            <div class="message__comments">
-              ${message.content}
-              <img class="Message__image" src="${message.image}">
-            </div>
-          </div>`
+        `<div class="message__body">
+          <div class="message__message-man">
+            ${message.user_name}
+          </div>
+          <div class="message__message-date">
+            ${message.created_at}
+          </div>
+          <div class="message__comments">
+            ${message.content}
+            <img class="Message__image" src="${message.image}">
+          </div>
+        </div>`
       return html;
     } else {
       let html =

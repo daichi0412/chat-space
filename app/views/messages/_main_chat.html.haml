@@ -7,7 +7,8 @@
         .header__member-list
           - @group.users.each do |user|
             = user.name
-      .header__edit Edit
+      = link_to edit_group_path(@group.id) do 
+        .header__edit Edit
     .message
       = render @messages
     .form

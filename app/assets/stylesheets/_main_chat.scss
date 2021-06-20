@@ -21,14 +21,17 @@
       margin-left: 40px;
     }
   }
-  .header__edit {
-    font-size: 16px;
-    color: #38aef0;
-    display: flex;
-    align-items: center;
-    margin: 28px 40px 28px 0;
-    border: 1px solid #38aef0;
-    padding: 0 20px;
+  a {
+    text-decoration: none;
+    .header__edit {
+      font-size: 16px;
+      color: #38aef0;
+      display: flex;
+      align-items: center;
+      margin: 28px 40px 28px 0;
+      border: 1px solid #38aef0;
+      padding: 10px 20px;
+    }
   }
 }
 

@@ -3,23 +3,6 @@ $(function(){
     if ( message.image ) {
       let html =
       `<div class="MessageBox" data-message-id=${message.id}>
-          <div class="message__body">
-            <div class="message__message-man">
-              ${message.user_name}
-            </div>
-            <div class="message__message-date">
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="message__comments">
-            ${message.content}
-            <img class="Message__image" src="${message.image}">
-          </div>
-        </div>`
-      return html;
-    } else {
-      let html =
-      `<div class="MessageBox" data-message-id=${message.id}>
         <div class="message__body">
           <div class="message__message-man">
             ${message.user_name}
@@ -27,11 +10,28 @@ $(function(){
           <div class="message__message-date">
             ${message.created_at}
           </div>
+          <div class="message__comments">
+            ${message.content}
+            <img class="Message__image" src="${message.image}">
+          </div>
+        </div>
+      </div>`
+        return html;
+    } else {
+      let html =
+      `<div class="MessageBox" data-message-id=${message.id}>
+      <div class="message__body">
+        <div class="message__message-man">
+          ${message.user_name}
+        </div>
+        <div class="message__message-date">
+          ${message.created_at}
         </div>
         <div class="message__comments">
           ${message.content}
         </div>
-      </div>`
+      </div>
+    </div>`
       return html;
     };
   }
@@ -58,8 +58,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.MessageField').append(insertHTML);
-        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
+        $('.message').append(insertHTML);
+        $('.message').animate({ scrollTop: $('.message')[0].scrollHeight});
       }
     })
     .fail(function() {
